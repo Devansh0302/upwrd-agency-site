@@ -99,7 +99,7 @@ export default function ContactPage() {
                 <div className={styles.infoIcon}><Mail size={22} /></div>
                 <div>
                   <h3>Email Us</h3>
-                  <a href="mailto:info@upwrd.tech">info@upwrd.tech</a>
+                  <a href="mailto:upwrd.tech@gmail.com">upwrd.tech@gmail.com</a>
                 </div>
               </motion.div>
               <motion.div variants={fadeUp} className={styles.infoCard}>

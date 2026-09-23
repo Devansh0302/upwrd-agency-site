@@ -7,7 +7,7 @@ export const siteConfig = {
   founder: "Devansh Khandelwal",
   coFounder: "Vansh Khandelwal",
   emails: {
-    contact: "info@upwrd.tech",
+    contact: "upwrd.tech@gmail.com",
   },
   phones: {
     primary: "+918005621022",

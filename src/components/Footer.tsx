@@ -92,8 +92,8 @@ export default function Footer() {
 
         <div>
           <h4 className={styles.heading}>Contact Us</h4>
-          <a href="mailto:info@upwrd.tech" className={styles.footerLink}>
-            info@upwrd.tech
+          <a href="mailto:upwrd.tech@gmail.com" className={styles.footerLink}>
+            upwrd.tech@gmail.com
           </a>
           <a href="tel:+918005621022" className={styles.footerLink}>
             +91 80056 21022
