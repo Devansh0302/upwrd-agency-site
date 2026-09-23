@@ -1,0 +1,23 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: radial-gradient(circle at center, rgba(245, 189, 32, 0.12) 0%, #000000 60%);
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.logo {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  background: linear-gradient(135deg, #ffffff 30%, var(--yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  will-change: transform, opacity, filter;
+  filter: drop-shadow(0 0 20px rgba(245, 189, 32, 0.2));
+}

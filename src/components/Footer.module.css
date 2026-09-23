@@ -1,0 +1,124 @@
+.footer {
+  background: #050505;
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+.cta {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--line);
+  background: radial-gradient(ellipse at center top, rgba(245, 189, 32, 0.06), transparent 50%);
+}
+
+.cta h2 { font-size: 34px; letter-spacing: -1.5px; }
+.cta .btn { margin-top: 28px; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding: 70px 0;
+}
+
+.brand { padding-right: 30px; }
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  color: var(--yellow);
+  font-size: 18px;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.75;
+  margin-top: 18px;
+  max-width: 300px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.socialLink {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.socialLink:hover {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+
+.heading {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.footerLink {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 7px 0;
+  transition: color 0.25s, padding-left 0.3s;
+}
+
+.footerLink:hover {
+  color: var(--yellow);
+  padding-left: 4px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .cta { padding: 60px 0; }
+  .cta h2 { font-size: 26px; letter-spacing: -1px; }
+
+  .bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}

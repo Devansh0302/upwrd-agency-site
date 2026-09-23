@@ -1,26 +1,38 @@
 "use client";
 
-import { ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { ReactNode, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
 
 export default function PageTransition({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const overlay = useRef<HTMLDivElement>(null);
+
+  // Entrance animation whenever pathname changes
+  useEffect(() => {
+    if (overlay.current) {
+      gsap.fromTo(
+        overlay.current,
+        { scaleY: 1, transformOrigin: "bottom" },
+        { scaleY: 0, duration: 1, ease: "power4.inOut", delay: 0.1 }
+      );
+    }
+  }, [pathname]);
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -20 }}
-        transition={{
-          duration: 0.5,
-          ease: [0.2, 0.8, 0.2, 1],
+    <>
+      <div
+        ref={overlay}
+        style={{
+          position: "fixed",
+          inset: 0,
+          backgroundColor: "#000000",
+          zIndex: 9999,
+          pointerEvents: "none",
+          willChange: "transform",
         }}
-      >
-        {children}
-      </motion.div>
-    </AnimatePresence>
+      />
+      <div key={pathname}>{children}</div>
+    </>
   );
 }

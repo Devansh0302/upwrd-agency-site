@@ -11,8 +11,7 @@ export default function CursorGlow() {
 
     let mx = window.innerWidth / 2;
     let my = window.innerHeight / 2;
-    let gx = mx;
-    let gy = my;
+    let gx = mx, gy = my;
     let animFrame: number;
 
     const handleMove = (e: PointerEvent) => {
@@ -21,8 +20,8 @@ export default function CursorGlow() {
     };
 
     const animate = () => {
-      gx += (mx - gx) * 0.1;
-      gy += (my - gy) * 0.1;
+      gx += (mx - gx) * 0.06;
+      gy += (my - gy) * 0.06;
       glow.style.left = `${gx}px`;
       glow.style.top = `${gy}px`;
       animFrame = requestAnimationFrame(animate);
